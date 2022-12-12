@@ -1,0 +1,32 @@
+{
+  "name": "rock-aper-scissor-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.7.3",
+    "@tensorflow/tfjs-node": "^4.0.0",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.2",
+    "expo-file-system": "^15.1.1",
+    "google-protobuf": "^3.21.2",
+    "grpc": "^1.24.11",
+    "grpc-web": "^1.4.2",
+    "jpeg-js": "^0.4.4",
+    "lottie-web": "^5.10.0",
+    "next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-measure": "^2.5.2",
+    "react-webcam": "^7.0.1",
+    "sharp": "^0.31.2",
+    "styled": "^1.0.0",
+    "styled-components": "^5.3.6",
+    "tensor-as-base64": "^0.3.0"
+  }
+}

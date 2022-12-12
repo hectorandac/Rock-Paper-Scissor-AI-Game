@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  web:
+    image: "hectorandac/ai.rock_paper_scissors.rps-web:latest"
+    user: root
+    restart: always
+    ports:
+      - "3000:3000"
+  
+  backend:
+    image: "hectorandac/ai.rock_paper_scissors.rps-backend:latest"
+    restart: always
+    ports:
+      - "50051:50051"
+
+  proxy:
+    image: "hectorandac/ai.rock_paper_scissors.rps-proxy:latest"
+    restart: always
+    ports:
+      - "8080:8080"
+      - "9901:9901"

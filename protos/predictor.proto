@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.ai.predictor";
+option java_outer_classname = "PredictorProto";
+option objc_class_prefix = "HLW";
+
+package predictor;
+
+service Predict {
+  rpc PredictRoPaSc (ImageRequest) returns (PredictionReply) {}
+}
+
+message ImageRequest {
+  string base64image = 1;
+}
+
+message PredictionReply {
+  int32 predictedClass = 1;
+  double confidence = 2;
+}
