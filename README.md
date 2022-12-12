@@ -6,3 +6,5 @@ We are using some code that wasn't developed by us ([yolov6](https://github.com/
 Feel free to access this project on your mobile device at https://rps.ai.hect.dev/
 
 The weights were generated with our [Backend Git Project](https://github.com/hectorandac/AI-Rock-Paper-Scissors-DEV)
+
+![tutorial](https://user-images.githubusercontent.com/20134188/206982865-cbc5c985-9d4a-4788-9819-8c2b84f1c21a.gif)
