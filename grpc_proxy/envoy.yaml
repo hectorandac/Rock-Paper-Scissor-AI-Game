@@ -41,7 +41,7 @@ static_resources:
                   - name: envoy.filters.http.router
   clusters:
     - name: predictor
-      connect_timeout: 0.25s
+      connect_timeout: 3s
       type: logical_dns
       http2_protocol_options: {}
       lb_policy: round_robin
@@ -52,5 +52,5 @@ static_resources:
               - endpoint:
                   address:
                     socket_address:
-                      address: 10.147.20.151
+                      address: 192.168.0.31
                       port_value: 50051

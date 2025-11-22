@@ -5,17 +5,31 @@ services:
     user: root
     restart: always
     ports:
-      - "3000:3000"
+      - "8084:3000"
+    networks:
+      - proxy-network
   
   backend:
-    image: "hectorandac/ai.rock_paper_scissors.rps-backend:latest"
+    image: "hectorandac/ai.rock_paper_scissors.rps-backend"
     restart: always
     ports:
       - "50051:50051"
+    networks:
+      - internal
 
   proxy:
     image: "hectorandac/ai.rock_paper_scissors.rps-proxy:latest"
     restart: always
+    volumes:
+      - ./grpc_proxy/envoy.yaml:/etc/envoy/envoy.yaml:ro
     ports:
-      - "8080:8080"
+      - "8085:8080"
       - "9901:9901"
+    networks:
+      - proxy-network
+      - internal
+
+networks:
+  internal:
+  proxy-network:
+    external: true

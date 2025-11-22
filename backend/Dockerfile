@@ -11,7 +11,6 @@ ADD . .
 
 RUN pip --version
 RUN pip install nvidia-pyindex
-RUN pip install pytorch-quantization
 RUN pip --no-cache install -r requirements.txt
 
 ADD builder.py /usr/local/lib/python3.10/dist-packages/google/protobuf/internal/
